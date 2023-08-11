@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* category button */
+.categoy-button {
+  color: white;
+  padding: 5px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Opacità al 50% */
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.71);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.slide-in-blurred-bottom {
+  -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+    both;
+  animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@-webkit-keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+    transform: translateY(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
   }
 }
