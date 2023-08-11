@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 
 function App() {
   return (
-    <Container>
+    <Container className="overlay vh-100">
       <MainPage />
     </Container>
   );

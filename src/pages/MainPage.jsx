@@ -8,7 +8,7 @@ const MainPage = () => {
       <Row>
         <NavBar />
       </Row>
-      <Row>
+      <Row >
         <CategoryMenu />
       </Row>
     </>

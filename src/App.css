@@ -1,3 +1,9 @@
+body {
+  background-color: black;
+  background-image: url("https://www.pngplay.com/wp-content/uploads/10/Chilli-Background-PNG-Image.png");
+  background-repeat: repeat;
+  background-size: 100px;
+}
 /* category button */
 .categoy-button {
   color: white;
