@@ -1,35 +1,51 @@
-import { Col, Row } from "react-bootstrap";
-import CategoyButton from "../dynamic/CategoryButton";
-
+import { Col, Container, Row } from "react-bootstrap";
+import ProductList from "../dynamic/ProductList";
+import { useNavigate } from "react-router-dom";
 const CategoryMenu = () => {
+  const navigate = useNavigate();
   const props = [
     {
-      category: "DRINK",
-      url: "https://www.sowinesofood.it/wp-content/uploads/2021/06/bibite-analcoliche-compressed.jpg",
+      category: "drink",
     },
     {
-      category: "FOOD",
-      url: "https://www.comunicaffe.it/wp-content/uploads/2017/02/panini_pizza.png",
+      category: "food",
     },
     {
-      category: "SPECIAL",
-      url: "https://www.spiagge.it/magazine/wp-content/uploads/2023/07/spiagge-avola.png",
+      category: "special",
     },
   ];
 
   return (
-    <Col
-      className="text-dark text-center
-    "
-    >
-      {props.map((prop) => (
-        <>
-          <Row>
-            <CategoyButton category={prop.category} url={prop.url} />
+    <>
+      <Col xs={12}>
+        <h1></h1>
+      </Col>
+      <Col
+        xs={12}
+        className="text-dark text-center container-category  justify-content-between
+      "
+      >
+        {props.map((prop) => (
+          <Row
+            key={prop.category}
+            className="box-category  align-content-center"
+          >
+            <div
+              onClick={() => navigate(`/${prop.category}`)}
+              className="title-category overlay-dark rounded-pill b mx-auto"
+            >
+              <div>{prop.category.toUpperCase()}</div>
+            </div>
           </Row>
-        </>
-      ))}
-    </Col>
+        ))}
+        {/* <Row className="box-category border">
+        <div>FOOD</div>
+      </Row>
+      <Row className="box-category border">
+        <div>SPECIAL</div>
+      </Row> */}
+      </Col>
+    </>
   );
 };
 export default CategoryMenu;

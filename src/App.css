@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
 body {
-  background-color: black;
+  background-color: white;
   background-image: url("https://www.pngplay.com/wp-content/uploads/10/Chilli-Background-PNG-Image.png");
   background-repeat: repeat;
   background-size: 100px;
 }
 /* category button */
-.categoy-button {
+.category-button {
   color: white;
   padding: 5px 20px;
   margin: 10px;
@@ -20,13 +25,55 @@ body {
   background-repeat: no-repeat;
   transition: transform 0.3s, filter 0.3s;
 }
+.overlay-dark {
+  background-color: rgba(209, 207, 207, 0.541);
 
+  -webkit-box-shadow: 12px 12px 19px -3px #000000;
+  box-shadow: 12px 12px 19px -3px #000000d3;
+}
 .overlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7); /* Opacità al 50% */
+  /* height:  fit-content; */
+  background-color: rgba(255, 255, 255, 0.6); /* Opacità al 50% */
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.71);
+}
+.swing-in-right-bck {
+  -webkit-animation: swing-in-right-bck 0.6s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-right-bck 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    both;
+}
+@-webkit-keyframes swing-in-right-bck {
+  0% {
+    -webkit-transform: rotateY(70deg);
+    transform: rotateY(70deg);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-right-bck {
+  0% {
+    -webkit-transform: rotateY(70deg);
+    transform: rotateY(70deg);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    opacity: 1;
+  }
 }
 
 .slide-in-blurred-bottom {
@@ -73,5 +120,75 @@ body {
     -webkit-filter: blur(0);
     filter: blur(0);
     opacity: 1;
+  }
+}
+/* resume */
+.resume-button > h1 {
+  font-size: 70px !important;
+}
+.resume-button {
+  font-family: "Cherry Bomb One", cursive;
+  border-radius: 10px;
+  width: 70%;
+}
+/* navBar */
+.main-title {
+  font-family: "Bad Script", cursive;
+  font-size: 50px;
+}
+.sub-title {
+  font-family: "Source Code Pro", monospace;
+}
+.top-nav {
+  background-color: rgb(135, 8, 27);
+}
+/* footer */
+footer {
+  padding-top: 10px;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+}
+.container-category {
+  padding-top: 200px;
+}
+@media (max-width: 600px) {
+  .container-category {
+    padding-top: 150px;
+  }
+}
+.box-category {
+  height: 120px;
+}
+.title-category > div {
+  border-radius: 20px;
+}
+.title-category {
+  color: black;
+  border: none;
+  font-family: "Shadows Into Light Two", cursive;
+  padding: 10px 20px;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+/* Stili aggiuntivi per adattare il pulsante su schermi più piccoli */
+@media (max-width: 600px) {
+  .title-category {
+    font-size: 40px;
+
+    padding: 8px 16px;
+  }
+  .box-category > div {
+    width: 70%;
   }
 }
