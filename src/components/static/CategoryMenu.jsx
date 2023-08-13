@@ -17,8 +17,8 @@ const CategoryMenu = () => {
 
   return (
     <>
-      <Col xs={12}>
-        <h1></h1>
+      <Col xs={12} className="text-center">
+        <h1 className="title-category">Categorie</h1>
       </Col>
       <Col
         xs={12}

@@ -1,4 +1,5 @@
 import "./App.css";
+import "./Style/animation.css";
 
 import { Container, Row } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";

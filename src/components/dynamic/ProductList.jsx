@@ -77,11 +77,11 @@ const ProductList = ({ category }) => {
   ];
 
   const special = [
-    // {
-    //   nome: "Analcolico Spritz",
-    //   prezzo: 4.0,
-    //   ingredienti: ["Succo d'arancia", "Succo di pompelmo", "Soda"],
-    // },
+    {
+      nome: "Analcolico Spritz",
+      prezzo: 4.0,
+      ingredienti: ["Succo d'arancia", "Succo di pompelmo", "Soda"],
+    },
   ];
   var currentProducts = [];
 
@@ -96,10 +96,8 @@ const ProductList = ({ category }) => {
   });
   return (
     <Row>
-      <Col xs={12} className="nav-category ">
-        <div onClick={() => navigate("/drink")}>DRINK</div>
-        <div onClick={() => navigate("/food")}>FOOD</div>
-        <div onClick={() => navigate("/special")}>SPECIAL</div>
+      <Col xs={12} className="title-category text-center">
+        {location.pathname.replace("/", "").toUpperCase()}
       </Col>
 
       <Col className=" ">
@@ -107,6 +105,20 @@ const ProductList = ({ category }) => {
         {section === 2 ? food.map((p) => <Product p={p} />) : <></>}
         {section === 3 ? special.map((p) => <Product p={p} />) : <></>}
       </Col>
+      {/* <Col
+        xs={12}
+        className=" slide-in-blurred-bottom fixed-bottom nav-category d-flex justify-content-between"
+      >
+        <div className=" overlay-dark" onClick={() => navigate("/drink")}>
+          DRINK
+        </div>
+        <div className=" overlay-dark" onClick={() => navigate("/food")}>
+          FOOD
+        </div>
+        <div className=" overlay-dark" onClick={() => navigate("/special")}>
+          SPECIAL
+        </div>
+      </Col> */}
     </Row>
   );
 };
