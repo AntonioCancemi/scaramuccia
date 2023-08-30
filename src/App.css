@@ -3,41 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+html,
 body {
-  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+body {
+  max-height: 100vh;
   background-image: url("https://www.pngplay.com/wp-content/uploads/10/Chilli-Background-PNG-Image.png");
   background-repeat: repeat;
   background-size: 100px;
+  font-family: "Helvetica Neue", sans-serif;
 }
-/* category button */
-.category-button {
-  color: white;
-  padding: 5px 20px;
-  margin: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: transform 0.3s, filter 0.3s;
-}
-.overlay-dark {
-  background-color: rgba(209, 207, 207, 0.541);
 
-  -webkit-box-shadow: 12px 12px 19px -3px #000000;
-  box-shadow: 12px 12px 19px -3px #000000d3;
-}
 .overlay {
-  /* height:  fit-content; */
-  background-color: rgba(255, 255, 255, 0.7); /* Opacità al 50% */
-  border-radius: 5px;
-  color: rgba(0, 0, 0, 0.71);
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.555); /* Opacità al 50% */
 }
-
 
 /* navBar */
 .main-title {
@@ -47,73 +32,30 @@ body {
 .sub-title {
   font-family: "Source Code Pro", monospace;
 }
-.top-nav {
-  background-color: rgb(135, 8, 27);
+.content {
+  max-height: 77%; /* Altezza massima della sezione scrollabile */
+  overflow-y: scroll; /* Abilita lo scroll verticale se necessario */
+  border: 1px solid #ccc; /* Aggiungi un bordo per evidenziare la sezione */
 }
+.top-row {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(135, 8, 27);
+  color: white;
+  padding-bottom: 10px;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 /* footer */
-footer {
-  padding-top: 10px;
-  height: 100px;
+.bottom-row {
+  height: 50px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: rgb(135, 8, 27);
   color: white;
   text-align: center;
-}
-footer p {
-  font-family: "Roboto", sans-serif;
-  font-size: 23px;
-}
-.container-category {
-  padding-top: 200px;
-}
-@media (max-width: 600px) {
-  .container-category {
-    padding-top: 150px;
-  }
-}
-.box-category {
-  height: 120px;
-}
-.title-category > div {
-  border-radius: 20px;
-}
-.title-category {
-  color: black;
-  border: none;
-  font-family: "Shadows Into Light Two", cursive;
-  padding: 10px 20px;
-  font-size: 50px;
-  cursor: pointer;
-}
-
-/* Stili aggiuntivi per adattare il pulsante su schermi più piccoli */
-@media (max-width: 600px) {
-  .title-category {
-    font-size: 40px;
-
-    padding: 8px 16px;
-  }
-  .box-category > div {
-    width: 70%;
-  }
-}
-
-/* Product-list */
-.nav-category {
-  background-attachment: fixed;
-  bottom: 100px !important;
-}
-.nav-category div {
-  font-size: 25px;
-  font-family: "Shadows Into Light Two", cursive;
-  font-weight: bold;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  border-radius: 10px;
-  border: 3px black solid;
 }

@@ -3,33 +3,21 @@ import "./Style/animation.css";
 
 import { Container, Row } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "./components/static/NavBar";
-import Footer from "./components/static/Footer";
-import MainPage from "./pages/MainPage";
+import MenuPage from "./pages/MenuPage";
 import ResumePage from "./pages/ResumePage";
-import ProductList from "./components/dynamic/ProductList";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 function App() {
   return (
     <Router>
-      <Container className=" vh-100 overlay">
-        <Row>
+      <Container className="overlay mx-0 px-0 ">
+        <div className=" top-row">
           <NavBar />
-        </Row>
-        <Routes>
-          <Route path="/" element={<MainPage />}></Route>
+        </div>
+        <Routes location={"/menu"}>
+          {/* <Route path="/" element={<MainPage />}></Route> */}
           <Route path="/resume" element={<ResumePage />}></Route>
-          <Route
-            path="/drink"
-            element={<ProductList category={"drink"} />}
-          ></Route>
-          <Route
-            path="/food"
-            element={<ProductList category={"food"} />}
-          ></Route>
-          <Route
-            path="/special"
-            element={<ProductList category={"special"} />}
-          ></Route>
+          <Route path="/menu" element={<MenuPage />}></Route>
           <Route path="/about">{/* AboutPage */}</Route>
           <Route path="/reservation">{/* Reservation */}</Route>
         </Routes>
