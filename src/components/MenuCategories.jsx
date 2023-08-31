@@ -20,7 +20,7 @@ const MenuCategories = ({ categories, onSelectCategory }) => {
   };
 
   return (
-    <div className="menu-categories bg-light ">
+    <Row className="menu-categories bg-light ">
       <Slider {...slickSettings}>
         {categories.map((category, index) => (
           <div
@@ -34,7 +34,7 @@ const MenuCategories = ({ categories, onSelectCategory }) => {
           </div>
         ))}
       </Slider>
-    </div>
+    </Row>
   );
 };
 

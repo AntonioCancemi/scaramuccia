@@ -11,9 +11,8 @@ function App() {
   return (
     <Router>
       <Container className="overlay mx-0 px-0 ">
-        <div className=" top-row">
-          <NavBar />
-        </div>
+        <NavBar />
+        <Footer />
         <Routes location={"/menu"}>
           {/* <Route path="/" element={<MainPage />}></Route> */}
           <Route path="/resume" element={<ResumePage />}></Route>
@@ -21,7 +20,6 @@ function App() {
           <Route path="/about">{/* AboutPage */}</Route>
           <Route path="/reservation">{/* Reservation */}</Route>
         </Routes>
-        <Footer />
       </Container>
     </Router>
   );
